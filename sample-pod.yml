@@ -5,7 +5,8 @@ metadata:
 spec:
   containers:
     - name: sample-container
-      image: kenkolab-test:v1
+      image: sample-app:v1
+      # ローカルのDockerイメージを取得
       imagePullPolicy: IfNotPresent
       ports:
         - containerPort: 80
