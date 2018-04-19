@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-service
+spec:
+  type: NodePort
+  ports:
+    # エンドポイントなるポート番号
+  - port: 35555
+    protocol: TCP
+    # コンテナ側のポート
+    targetPort: 80
+  selector:
+    app: sample
